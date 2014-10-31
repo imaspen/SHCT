@@ -5,6 +5,6 @@ package uk.zebcoding.shct.lib;
  */
 public class ModVals {
     public static final String MOD_ID = "shct";
-    public static final String MOD_VER = "0.1.0";
+    public static final String MOD_VER = "0.1.1";
     public static final String MOD_NAME = "Super Heated Ceramic Tools";
 }

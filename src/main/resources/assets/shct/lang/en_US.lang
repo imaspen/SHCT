@@ -1,4 +1,12 @@
+# Tools
 item.ceramicPick.name=Ceramic Pick
 item.heatedCeramicPick.name=Super Heated Ceramic Pick
 item.ceramicShovel.name=Ceramic Shovel
 item.heatedCeramicShovel.name=Super Heated Ceramic Shovel
+
+# Other Items
+item.ceramicSludge.name=Ceramic Sludge
+item.ceramicIngot.name=Ceramic Ingot
+
+# Creative Tab
+itemGroup.shct=Super Heated Ceramic Tools

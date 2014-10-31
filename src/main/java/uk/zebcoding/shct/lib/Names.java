@@ -11,6 +11,8 @@ public class Names {
         public static final String SH_PICK = SH + "Pick";
         public static final String CT_SHOVEL = CT + "Shovel";
         public static final String SH_SHOVEL = SH + "Shovel";
+        public static final String CT_SLUDGE = CT + "Sludge";
+        public static final String CT_INGOT = CT + "Ingot";
     }
 
     public class NBT {

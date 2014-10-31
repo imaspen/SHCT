@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 import uk.zebcoding.shct.init.SHCTCrafting;
-import uk.zebcoding.shct.init.SItems;
+import uk.zebcoding.shct.init.SHCTItems;
 import uk.zebcoding.shct.lib.ModVals;
 import uk.zebcoding.shct.lib.SHCTEvents;
 import uk.zebcoding.shct.common.CommonProxy;
@@ -20,7 +20,7 @@ public class SuperHeatedCeramicTools {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        SItems.init();
+        SHCTItems.init();
         //blocks
     }
 

@@ -9,10 +9,14 @@ import net.minecraft.item.ItemStack;
  */
 public class SHCTCrafting {
     public static void init() {
-        GameRegistry.addShapedRecipe(new ItemStack(SItems.itemCTPick), "CCC", " B ", " B ", 'C', Items.clay_ball, 'B',
-                Items.blaze_rod);
+        ItemStack clayStack = new ItemStack(Items.clay_ball);
 
-        GameRegistry.addShapedRecipe(new ItemStack(SItems.itemCTShovel), "C", "B", "B", 'C', Items.clay_ball, 'B',
-                Items.blaze_rod);
+        GameRegistry.addShapelessRecipe(new ItemStack(SHCTItems.itemSHCTSludge), clayStack, clayStack, new ItemStack(Items.blaze_powder));
+
+        GameRegistry.addSmelting(SHCTItems.itemSHCTSludge, new ItemStack(SHCTItems.itemSHCTIngot), 1.0F);
+
+        GameRegistry.addShapedRecipe(new ItemStack(SHCTItems.itemSHCTPick), "CCC", " B ", " B ", 'C', SHCTItems.itemSHCTIngot, 'B', Items.blaze_rod);
+
+        GameRegistry.addShapedRecipe(new ItemStack(SHCTItems.itemSHCTShovel), "C", "B", "B", 'C', SHCTItems.itemSHCTIngot, 'B', Items.blaze_rod);
     }
 }

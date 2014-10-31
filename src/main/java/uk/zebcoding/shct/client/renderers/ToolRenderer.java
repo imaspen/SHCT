@@ -29,6 +29,7 @@ public class ToolRenderer implements IItemRenderer {
     @Override
     public void renderItem(IItemRenderer.ItemRenderType type, ItemStack itemStack, Object... data) {
         FontRenderer fontRenderer = Minecraft.getMinecraft().fontRenderer;
+        GL11.glEnable(GL11.GL_BLEND);
 
         IIcon icon = itemStack.getIconIndex();
         renderItem.renderIcon(0, 0, icon, 16, 16);
@@ -37,7 +38,6 @@ public class ToolRenderer implements IItemRenderer {
             int damage = itemStack.stackTagCompound.getByte(Names.NBT.DAMAGE);
 
             GL11.glDisable(GL11.GL_TEXTURE_2D);
-            GL11.glEnable(GL11.GL_BLEND);
             GL11.glDepthMask(false);
             GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 
@@ -61,6 +61,8 @@ public class ToolRenderer implements IItemRenderer {
             GL11.glEnable(GL11.GL_TEXTURE_2D);
             String text = Integer.toString(itemStack.stackTagCompound.getByte(Names.NBT.DAMAGE));
             fontRenderer.drawStringWithShadow(text, damage >= 10 ? 4 : 10, 8, 0xFFFFFF);
+        } else {
+            GL11.glDisable(GL11.GL_BLEND);
         }
     }
 }

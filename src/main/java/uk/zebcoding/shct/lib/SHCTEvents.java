@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
-import uk.zebcoding.shct.init.SItems;
+import uk.zebcoding.shct.init.SHCTItems;
 
 /**
  * Created by Charlotte on 23/10/2014.
@@ -20,7 +20,7 @@ public class SHCTEvents {
         EntityPlayer player = event.entityPlayer;
         if (player != null) {
             ItemStack held = player.getHeldItem();
-            if (held != null && (held.getItem() == SItems.itemCTPick || held.getItem() == SItems.itemCTShovel) && held.getItemDamage() == 1) {
+            if (held != null && (held.getItem() == SHCTItems.itemSHCTPick || held.getItem() == SHCTItems.itemSHCTShovel) && held.getItemDamage() == 1) {
                 event.newSpeed = event.originalSpeed * 7.5F;
             }
         }
@@ -30,7 +30,7 @@ public class SHCTEvents {
     public void onDropHarvest(BlockEvent.HarvestDropsEvent event) {
         if (!event.world.isRemote && event.harvester != null && event.harvester.getHeldItem() != null) {
             ItemStack tool = event.harvester.getHeldItem();
-            if (tool.getItem() == SItems.itemCTPick || tool.getItem() == SItems.itemCTShovel && tool.getItemDamage() == 1) {
+            if (tool.getItem() == SHCTItems.itemSHCTPick || tool.getItem() == SHCTItems.itemSHCTShovel && tool.getItemDamage() == 1) {
                 Block block = event.block;
                 if (FurnaceRecipes.smelting().getSmeltingResult(new ItemStack(block)) != null || block == Blocks.stone) {
                     event.dropChance = 0.0F;
