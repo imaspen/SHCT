@@ -1,0 +1,16 @@
+[
+{
+  "modid": "shct",
+  "name": "Super Heated Ceramic Tools.",
+  "description": "A Mod With Super Heated Ceramic Tools.",
+  "version": "0.1.0 dev build 3.",
+  "mcversion": "${mcversion}",
+  "url": "http://zebcoding.co.uk",
+  "updateUrl": "",
+  "authorList": ["Zebington","part of the Zebcoding team."],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
