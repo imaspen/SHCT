@@ -11,6 +11,7 @@ import net.minecraftforge.common.MinecraftForge;
 import uk.zebcoding.shct.init.SHCTBlocks;
 import uk.zebcoding.shct.init.SHCTCrafting;
 import uk.zebcoding.shct.init.SHCTItems;
+import uk.zebcoding.shct.init.SHCTTileEntities;
 import uk.zebcoding.shct.lib.ModVals;
 import uk.zebcoding.shct.lib.SHCTEvents;
 import uk.zebcoding.shct.common.CommonProxy;
@@ -26,12 +27,13 @@ public class SuperHeatedCeramicTools {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         SHCTItems.init();
-        SHCTBlocks.init();
+        //SHCTBlocks.init();
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
+        //SHCTTileEntities.init();
+        //NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
         proxy.initRendering();
         MinecraftForge.EVENT_BUS.register(new SHCTEvents());
         FMLCommonHandler.instance().bus().register(new SHCTEvents());

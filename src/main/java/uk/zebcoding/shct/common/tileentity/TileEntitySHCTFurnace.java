@@ -2,6 +2,7 @@ package uk.zebcoding.shct.common.tileentity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.BlockStaticLiquid;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -143,5 +144,10 @@ public class TileEntitySHCTFurnace extends TileEntity implements ISidedInventory
     @Override
     public boolean isItemValidForSlot(int slot, ItemStack itemStack) {
         return slot != 1 && FurnaceRecipes.smelting().getSmeltingResult(itemStack) != null;
+    }
+
+    @Override
+    public void updateEntity() {
+        System.out.println(worldObj.getBlock(this.xCoord, this.yCoord - 1, this.zCoord).getUnlocalizedName());
     }
 }
